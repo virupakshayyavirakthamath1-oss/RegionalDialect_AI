@@ -12,7 +12,7 @@ from flask import Flask, flash, jsonify, make_response, redirect, render_templat
 from werkzeug.security import check_password_hash, generate_password_hash
 
 from database import get_db, init_db, now_iso, DB_PATH
-from nlp.checker import check_text
+from checker import check_text
 from nlp.dialect import detect_dialect
 from nlp.slang import get_slang_dictionary
 
