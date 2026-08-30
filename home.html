@@ -1,0 +1,334 @@
+{% extends 'base.html' %}
+
+{% block title %}RegionalDialect AI — Home{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="hero-copy">
+
+        <span class="pill">AI · NLP · REGIONAL LANGUAGE</span>
+
+        <h1>
+            Grammar checking for the way
+            <span class="blue">people actually speak.</span>
+        </h1>
+
+        <p>
+            Check Kanglish, Hinglish, Tanglish and informal mixed-language
+            text. Detect dialect, grammar issues and slang, then get clear
+            explanations and corrections.
+        </p>
+
+        <div class="actions">
+            <a class="btn primary" href="{{ url_for('register') }}">
+                Start for Free →
+            </a>
+
+            <a class="btn secondary" href="{{ url_for('features') }}">
+                Explore Features
+            </a>
+        </div>
+
+        <div class="trust">
+            <span>✓ Personal history</span>
+            <span>✓ Custom dictionary</span>
+            <span>✓ Mobile friendly</span>
+        </div>
+
+    </div>
+
+
+    <div class="hero-card">
+
+        <div class="window-top">
+            <span></span>
+            <b>RegionalDialect AI</b>
+            <span>•••</span>
+        </div>
+
+        <div class="demo-label">
+            LIVE LANGUAGE ANALYSIS
+        </div>
+
+        <div class="demo-input">
+            maga naan office ge hogbeku
+        </div>
+
+        <div class="demo-row">
+
+            <div>
+                <small>Dialect</small>
+                <strong>Kanglish</strong>
+                <em>94%</em>
+            </div>
+
+            <div>
+                <small>Grammar</small>
+                <strong>Good</strong>
+                <em>92%</em>
+            </div>
+
+            <div>
+                <small>Slang</small>
+                <strong>1 found</strong>
+                <em>maga</em>
+            </div>
+
+        </div>
+
+        <div class="demo-success">
+            ✓ <b>maga</b> detected · regional slang · “friend / bro”
+        </div>
+
+        <div class="demo-correction">
+
+            <small>SUGGESTED CORRECTION</small>
+
+            <p>
+                Maga, naan office ge hogbeku.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="stats-strip">
+
+    <div>
+        <strong>3+</strong>
+        <span>Regional styles</span>
+    </div>
+
+    <div>
+        <strong>5,000</strong>
+        <span>Characters / check</span>
+    </div>
+
+    <div>
+        <strong>24/7</strong>
+        <span>Local development</span>
+    </div>
+
+    <div>
+        <strong>100%</strong>
+        <span>User-owned history</span>
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <span class="pill">CORE FEATURES</span>
+
+        <h2>
+            Everything your language tool needs
+        </h2>
+
+        <p>
+            Designed as a complete BCA project, not just a text box.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">🧠</div>
+
+            <h3>Auto Dialect Detection</h3>
+
+            <p>
+                Identify likely Kanglish, Hinglish or Tanglish
+                with confidence scoring.
+            </p>
+
+            <a href="{{ url_for('features') }}">
+                Learn more →
+            </a>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">✍️</div>
+
+            <h3>Grammar & Spelling</h3>
+
+            <p>
+                Rule-based corrections with explanations
+                and suggested wording.
+            </p>
+
+            <a href="{{ url_for('features') }}">
+                Learn more →
+            </a>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">🗣️</div>
+
+            <h3>Slang Intelligence</h3>
+
+            <p>
+                Detect regional slang and show meaning
+                plus formal alternatives.
+            </p>
+
+            <a href="{{ url_for('features') }}">
+                Learn more →
+            </a>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">📊</div>
+
+            <h3>Analytics Dashboard</h3>
+
+            <p>
+                Track checks, average scores, slang usage
+                and recent activity.
+            </p>
+
+            <a href="{{ url_for('features') }}">
+                Learn more →
+            </a>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">📚</div>
+
+            <h3>Personal Dictionary</h3>
+
+            <p>
+                Teach the checker your own local words
+                and meanings.
+            </p>
+
+            <a href="{{ url_for('features') }}">
+                Learn more →
+            </a>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">🎤</div>
+
+            <h3>Voice Tools</h3>
+
+            <p>
+                Use browser speech input and text-to-speech
+                on supported devices.
+            </p>
+
+            <a href="{{ url_for('features') }}">
+                Learn more →
+            </a>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">📄</div>
+
+            <h3>PDF & CSV Reports</h3>
+
+            <p>
+                Export individual analysis results
+                for project demonstrations.
+            </p>
+
+            <a href="{{ url_for('features') }}">
+                Learn more →
+            </a>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">🎯</div>
+
+            <h3>Practice Mode</h3>
+
+            <p>
+                Practice regional writing and instantly
+                evaluate your answer.
+            </p>
+
+            <a href="{{ url_for('features') }}">
+                Learn more →
+            </a>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">🔐</div>
+
+            <h3>Secure Accounts</h3>
+
+            <p>
+                Password hashing, CSRF protection,
+                private history and security headers.
+            </p>
+
+            <a href="{{ url_for('features') }}">
+                Learn more →
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<section class="cta">
+
+    <div>
+
+        <span class="pill">READY TO TEST</span>
+
+        <h2>
+            Build better regional-language communication.
+        </h2>
+
+        <p>
+            Create an account and try your first analysis.
+        </p>
+
+    </div>
+
+    <a class="btn white" href="{{ url_for('register') }}">
+        Create Free Account →
+    </a>
+
+</section>
+
+{% endblock %}

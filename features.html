@@ -1,0 +1,252 @@
+{% extends 'base.html' %}
+
+{% block title %}Features — RegionalDialect AI{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+
+    <span class="pill">POWERFUL FEATURES</span>
+
+    <h1>
+        Everything you need for
+        <span class="blue">regional language analysis.</span>
+    </h1>
+
+    <p>
+        RegionalDialect AI combines NLP, grammar checking,
+        slang detection and personalized language tools
+        into one platform.
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <div class="feature-grid large">
+
+
+        <!-- Registration & Login -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">🔐</div>
+
+            <h3>Registration & Login</h3>
+
+            <p>
+                Create an account, securely hash passwords
+                and keep your personal history private.
+            </p>
+
+        </div>
+
+
+        <!-- Dialect Detection -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">🧠</div>
+
+            <h3>Dialect Detection</h3>
+
+            <p>
+                Analyze regional marker words and calculate
+                confidence scores for Kanglish, Hinglish
+                and Tanglish.
+            </p>
+
+        </div>
+
+
+        <!-- Grammar Correction -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">✍️</div>
+
+            <h3>Grammar Correction</h3>
+
+            <p>
+                Find common grammar, capitalization and
+                punctuation issues and provide useful
+                suggestions.
+            </p>
+
+        </div>
+
+
+        <!-- Slang Explanation -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">🗣️</div>
+
+            <h3>Slang Explanation</h3>
+
+            <p>
+                Identify regional slang, explain its meaning
+                and provide a formal alternative.
+            </p>
+
+        </div>
+
+
+        <!-- Dashboard Analytics -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">📊</div>
+
+            <h3>Dashboard Analytics</h3>
+
+            <p>
+                View total checks, average score, slang count,
+                recent activity and preferred dialect.
+            </p>
+
+        </div>
+
+
+        <!-- Private History -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">🕘</div>
+
+            <h3>Private History</h3>
+
+            <p>
+                Review previous checks and delete individual
+                entries or clear your complete history.
+            </p>
+
+        </div>
+
+
+        <!-- Personal Dictionary -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">📚</div>
+
+            <h3>Personal Dictionary</h3>
+
+            <p>
+                Add custom regional words and meanings that
+                can be used in future analyses.
+            </p>
+
+        </div>
+
+
+        <!-- Voice Input -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">🎤</div>
+
+            <h3>Voice Input</h3>
+
+            <p>
+                Use browser speech recognition where supported
+                by your device and browser.
+            </p>
+
+        </div>
+
+
+        <!-- Text To Speech -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">🔊</div>
+
+            <h3>Text to Speech</h3>
+
+            <p>
+                Listen to entered or corrected text using
+                the browser speech engine.
+            </p>
+
+        </div>
+
+
+        <!-- Reports -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">📄</div>
+
+            <h3>Reports</h3>
+
+            <p>
+                Download analysis results and reports in
+                convenient PDF or CSV formats.
+            </p>
+
+        </div>
+
+
+        <!-- Dark Mode -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">🌙</div>
+
+            <h3>Dark Mode</h3>
+
+            <p>
+                Switch between light and dark themes with
+                your browser preference saved.
+            </p>
+
+        </div>
+
+
+        <!-- Mobile Responsive -->
+
+        <div class="feature-card">
+
+            <div class="feature-icon">📱</div>
+
+            <h3>Mobile Responsive</h3>
+
+            <p>
+                The interface automatically adapts to phones,
+                tablets and desktop screens.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<section class="cta">
+
+    <div>
+
+        <span class="pill">START NOW</span>
+
+        <h2>
+            Ready to check your regional language?
+        </h2>
+
+        <p>
+            Create your free account and start analysing
+            regional language text.
+        </p>
+
+    </div>
+
+    <a class="btn white" href="{{ url_for('register') }}">
+        Create Free Account →
+    </a>
+
+</section>
+
+{% endblock %}
