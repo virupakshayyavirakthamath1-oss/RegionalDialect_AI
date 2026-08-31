@@ -1,4 +1,4 @@
-from rules import check_grammar
+from nlp.rules import check_grammar
 from nlp.dialect import detect_dialect
 from nlp.slang import detect_slang
 
