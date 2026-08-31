@@ -1,9 +1,9 @@
 import json
 import re
 import sqlite3
-from .dialect import detect_dialect
-from .slang import detect_slang
-from .rules import apply_rules
+from dialect import detect_dialect
+from rules import check_grammar
+from slang import detect_slang
 
 
 def _custom_words(db_path, user_id):
