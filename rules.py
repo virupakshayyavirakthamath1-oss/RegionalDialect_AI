@@ -1,5 +1,6 @@
 import re
 
+
 RULES = [
     (
         r"\bi am go\b",
@@ -60,21 +61,18 @@ RULES = [
 
 def apply_rules(text):
     """
-    Apply grammar and style rules to the supplied text.
+    Apply grammar and style rules.
 
     Returns:
-        tuple:
-            corrected_text: str
-            errors: list[dict]
+        corrected_text, errors
     """
 
-    if not isinstance(text, str):
-        text = str(text or "")
+    if text is None:
+        text = ""
 
-    corrected = text.strip()
+    corrected = str(text).strip()
     errors = []
 
-    # Apply grammar/style rules
     for pattern, replacement, kind, explanation in RULES:
 
         match = re.search(
@@ -98,10 +96,10 @@ def apply_rules(text):
                 "type": kind,
                 "original": original,
                 "suggestion": replacement,
-                "explanation": explanation
+                "explanation": explanation,
             })
 
-    # Capitalization
+    # Capitalize first character
     if corrected and corrected[0].islower():
 
         fixed = corrected[0].upper() + corrected[1:]
@@ -110,19 +108,19 @@ def apply_rules(text):
             "type": "Capitalization",
             "original": corrected[0],
             "suggestion": fixed[0],
-            "explanation": "Start a sentence with a capital letter."
+            "explanation": "Start a sentence with a capital letter.",
         })
 
         corrected = fixed
 
-    # Punctuation
+    # Add punctuation
     if corrected and corrected[-1] not in ".!?":
 
         errors.append({
             "type": "Punctuation",
             "original": "(missing)",
             "suggestion": ".",
-            "explanation": "Add punctuation at the end of a complete sentence."
+            "explanation": "Add punctuation at the end of a complete sentence.",
         })
 
         corrected += "."
@@ -132,13 +130,15 @@ def apply_rules(text):
 
 def check_grammar(text):
     """
-    Compatibility wrapper for checker.py.
+    Compatibility function used by checker.py.
 
-    This allows checker.py to use:
-
-        from rules import check_grammar
-
-    while the actual rule engine remains in apply_rules().
+    Returns the same correction/error information
+    produced by apply_rules().
     """
 
-    return apply_rules(text)
+    corrected, errors = apply_rules(text)
+
+    return {
+        "correction": corrected,
+        "errors": errors,
+    }
